@@ -1,0 +1,5 @@
+# Specify Java files
+*.java linguist-language=Java
+# Ignore YAML files if they are not relevant for language stats
+*.yaml linguist-hidden=true
+*.yml linguist-hidden=true
