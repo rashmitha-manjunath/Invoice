@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.springboot.invoice.controller.InvoiceControllerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-01-16T05:27:47" hostname="LAPTOP-LCU262I0" time="2.024">
+  <properties/>
+  <testcase name="testGetAllInvoices()" classname="com.springboot.invoice.controller.InvoiceControllerTest" time="1.78"/>
+  <testcase name="testPayInvoice()" classname="com.springboot.invoice.controller.InvoiceControllerTest" time="0.106"/>
+  <testcase name="testDeleteInvoice()" classname="com.springboot.invoice.controller.InvoiceControllerTest" time="0.026"/>
+  <testcase name="testGetInvoiceById()" classname="com.springboot.invoice.controller.InvoiceControllerTest" time="0.023"/>
+  <testcase name="testProcessOverdueInvoices()" classname="com.springboot.invoice.controller.InvoiceControllerTest" time="0.021"/>
+  <testcase name="testCreateInvoice()" classname="com.springboot.invoice.controller.InvoiceControllerTest" time="0.029"/>
+  <testcase name="testUpdatePaymentInvoice()" classname="com.springboot.invoice.controller.InvoiceControllerTest" time="0.031"/>
+  <system-out><![CDATA[10:57:48.547 [Test worker] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	c.s.i.c.InvoiceController:
+	{POST [/invoices/{id}/payments]}: payInvoice(Long,Payment)
+	{GET [/invoices]}: getAllInvoices()
+	{POST [/invoices]}: createInvoice(Invoice)
+	{GET [/invoices/{id}]}: getInvoiceById(Long)
+	{DELETE [/invoices/{id}]}: deleteInvoice(Long)
+	{POST [/invoices/process-overdue]}: processOverdueInvoices()
+	{PUT [/invoices/{id}/payments]}: updatepaymentInvoice(Long,Payment)
+10:57:48.556 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 7 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+10:57:48.891 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:57:48.938 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:57:48.970 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:57:48.971 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:57:48.976 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:57:48.976 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:57:48.978 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7e53339
+10:57:48.978 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@58fef7f7
+10:57:48.978 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:57:48.979 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 8 ms
+10:57:49.046 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - GET "/invoices", parameters={}
+10:57:49.054 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.springboot.invoice.controller.InvoiceController#getAllInvoices()
+10:57:49.089 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+10:57:49.093 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [[com.springboot.invoice.model.Invoice@37c41ec0]]
+10:57:49.159 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+10:57:49.182 [Test worker] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	c.s.i.c.InvoiceController:
+	{POST [/invoices/{id}/payments]}: payInvoice(Long,Payment)
+	{GET [/invoices]}: getAllInvoices()
+	{POST [/invoices]}: createInvoice(Invoice)
+	{GET [/invoices/{id}]}: getInvoiceById(Long)
+	{DELETE [/invoices/{id}]}: deleteInvoice(Long)
+	{POST [/invoices/process-overdue]}: processOverdueInvoices()
+	{PUT [/invoices/{id}/payments]}: updatepaymentInvoice(Long,Payment)
+10:57:49.184 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 7 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+10:57:49.189 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:57:49.191 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:57:49.191 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:57:49.192 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:57:49.192 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:57:49.192 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:57:49.192 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3bed3315
+10:57:49.193 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@119b0892
+10:57:49.193 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:57:49.193 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+10:57:49.197 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - POST "/invoices/1/payments", parameters={}
+10:57:49.198 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.springboot.invoice.controller.InvoiceController#payInvoice(Long, Payment)
+10:57:49.253 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.springboot.invoice.model.Payment@27be17c8]
+10:57:49.278 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+10:57:49.278 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [com.springboot.invoice.model.Invoice@43d3aba5]
+10:57:49.279 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+10:57:49.290 [Test worker] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	c.s.i.c.InvoiceController:
+	{POST [/invoices/{id}/payments]}: payInvoice(Long,Payment)
+	{GET [/invoices]}: getAllInvoices()
+	{POST [/invoices]}: createInvoice(Invoice)
+	{GET [/invoices/{id}]}: getInvoiceById(Long)
+	{DELETE [/invoices/{id}]}: deleteInvoice(Long)
+	{POST [/invoices/process-overdue]}: processOverdueInvoices()
+	{PUT [/invoices/{id}/payments]}: updatepaymentInvoice(Long,Payment)
+10:57:49.291 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 7 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+10:57:49.296 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:57:49.299 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:57:49.299 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:57:49.299 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:57:49.299 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:57:49.299 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:57:49.299 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5b9499fe
+10:57:49.299 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@74d6736
+10:57:49.299 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:57:49.300 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+10:57:49.303 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - DELETE "/invoices/1", parameters={}
+10:57:49.304 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.springboot.invoice.controller.InvoiceController#deleteInvoice(Long)
+10:57:49.306 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+10:57:49.306 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Nothing to write: null body
+10:57:49.307 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 204 NO_CONTENT
+10:57:49.315 [Test worker] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	c.s.i.c.InvoiceController:
+	{POST [/invoices/{id}/payments]}: payInvoice(Long,Payment)
+	{GET [/invoices]}: getAllInvoices()
+	{POST [/invoices]}: createInvoice(Invoice)
+	{GET [/invoices/{id}]}: getInvoiceById(Long)
+	{DELETE [/invoices/{id}]}: deleteInvoice(Long)
+	{POST [/invoices/process-overdue]}: processOverdueInvoices()
+	{PUT [/invoices/{id}/payments]}: updatepaymentInvoice(Long,Payment)
+10:57:49.316 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 7 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+10:57:49.322 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:57:49.325 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:57:49.325 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:57:49.325 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:57:49.325 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:57:49.325 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:57:49.325 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4ecd00b5
+10:57:49.326 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@10947c4e
+10:57:49.326 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:57:49.326 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+10:57:49.328 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - GET "/invoices/1", parameters={}
+10:57:49.328 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.springboot.invoice.controller.InvoiceController#getInvoiceById(Long)
+10:57:49.331 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+10:57:49.332 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [com.springboot.invoice.model.Invoice@3330f3ad]
+10:57:49.332 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+10:57:49.339 [Test worker] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	c.s.i.c.InvoiceController:
+	{POST [/invoices/{id}/payments]}: payInvoice(Long,Payment)
+	{GET [/invoices]}: getAllInvoices()
+	{POST [/invoices]}: createInvoice(Invoice)
+	{GET [/invoices/{id}]}: getInvoiceById(Long)
+	{DELETE [/invoices/{id}]}: deleteInvoice(Long)
+	{POST [/invoices/process-overdue]}: processOverdueInvoices()
+	{PUT [/invoices/{id}/payments]}: updatepaymentInvoice(Long,Payment)
+10:57:49.340 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 7 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+10:57:49.345 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:57:49.347 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:57:49.347 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:57:49.347 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:57:49.347 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:57:49.347 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:57:49.347 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@705a8dbc
+10:57:49.347 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@40729f01
+10:57:49.347 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:57:49.347 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+10:57:49.348 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - POST "/invoices/process-overdue", parameters={}
+10:57:49.349 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.springboot.invoice.controller.InvoiceController#processOverdueInvoices()
+10:57:49.350 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+10:57:49.350 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing ["Overdue invoices processed."]
+10:57:49.351 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+10:57:49.367 [Test worker] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	c.s.i.c.InvoiceController:
+	{POST [/invoices/{id}/payments]}: payInvoice(Long,Payment)
+	{GET [/invoices]}: getAllInvoices()
+	{POST [/invoices]}: createInvoice(Invoice)
+	{GET [/invoices/{id}]}: getInvoiceById(Long)
+	{DELETE [/invoices/{id}]}: deleteInvoice(Long)
+	{POST [/invoices/process-overdue]}: processOverdueInvoices()
+	{PUT [/invoices/{id}/payments]}: updatepaymentInvoice(Long,Payment)
+10:57:49.369 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 7 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+10:57:49.374 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:57:49.376 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:57:49.376 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:57:49.376 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:57:49.376 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:57:49.376 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:57:49.376 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@45b15381
+10:57:49.377 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2dbfcf7
+10:57:49.377 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:57:49.377 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+10:57:49.379 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - POST "/invoices", parameters={}
+10:57:49.379 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.springboot.invoice.controller.InvoiceController#createInvoice(Invoice)
+10:57:49.382 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.springboot.invoice.model.Invoice@1e4c6583]
+10:57:49.384 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+10:57:49.384 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Nothing to write: null body
+10:57:49.384 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 201 CREATED
+10:57:49.392 [Test worker] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+	c.s.i.c.InvoiceController:
+	{POST [/invoices/{id}/payments]}: payInvoice(Long,Payment)
+	{GET [/invoices]}: getAllInvoices()
+	{POST [/invoices]}: createInvoice(Invoice)
+	{GET [/invoices/{id}]}: getInvoiceById(Long)
+	{DELETE [/invoices/{id}]}: deleteInvoice(Long)
+	{POST [/invoices/process-overdue]}: processOverdueInvoices()
+	{PUT [/invoices/{id}/payments]}: updatepaymentInvoice(Long,Payment)
+10:57:49.395 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 7 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+10:57:49.400 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:57:49.405 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:57:49.405 [Test worker] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:57:49.405 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:57:49.406 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:57:49.406 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:57:49.406 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7bf01cb
+10:57:49.406 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2f382a5e
+10:57:49.406 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:57:49.406 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+10:57:49.411 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - PUT "/invoices/1/payments", parameters={}
+10:57:49.411 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.springboot.invoice.controller.InvoiceController#updatepaymentInvoice(Long, Payment)
+10:57:49.413 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.springboot.invoice.model.Payment@12b5736c]
+10:57:49.415 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+10:57:49.415 [Test worker] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [com.springboot.invoice.model.Invoice@539a138b]
+10:57:49.416 [Test worker] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
