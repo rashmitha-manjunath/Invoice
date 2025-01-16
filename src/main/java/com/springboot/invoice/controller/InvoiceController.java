@@ -50,9 +50,9 @@ public class InvoiceController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteInvoice(@PathVariable Long id) {
+    public ResponseEntity<Long> deleteInvoice(@PathVariable Long id) {
         invoiceService.deleteInvoice(id);
-        return ResponseEntity.noContent().build();
+        return new ResponseEntity<>(id, HttpStatus.OK);
     }
 
     @PostMapping("/process-overdue")
